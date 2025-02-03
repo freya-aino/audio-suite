@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "audio-suite"
+version = "0.1.0"
+description = ""
+authors = ["Freya Aino <freya.aino@pm.me>"]
+readme = "README.md"
+packages = [{include = "audio_suite"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "2.5.1+cu124"
+torchaudio = "2.5.1+cu124"
+numpy = "^2.2.2"
+pyannote-audio = "^3.3.2"
+transformers = "^4.48.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
