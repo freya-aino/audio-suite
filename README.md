@@ -7,11 +7,11 @@ This document describes the steps involved in the audio processing pipeline.
 ### Step 1: Individual Packets of Audio Data
 Audio data is received in individual packets. Each packet contains a small segment of the audio signal.
 
-### Step 2: Concatenation and Preprocessing
+### Step 2: Preprocessing
 The stream of audio packets is concatenated to form a continuous audio sequence. This sequence is then preprocessed to remove noise and enhance the quality of the audio signal.
 
 ### Step 3: Segmentation and Classification
-The preprocessed audio sequence is segmented into smaller chunks. Each segment is classified to determine the type of audio content it contains (e.g., speech, music, silence).
+The preprocessed audio sequence is segmented into smaller chunks. Each segment is classified to determine the type of audio content it contains (e.g., speech, music, noise).
 
 ### Step 4: Speech and Phonemes Extraction
 Segments identified as human speech are processed to extract text and phonemes. This involves converting the audio signal into a textual representation and identifying the phonetic components.
@@ -35,6 +35,22 @@ DeepSpeech: An open-source Speech-To-Text engine.
 Wav2Vec 2.0: A framework for self-supervised learning of speech representations.
 Tacotron 2: A neural network architecture for speech synthesis.
 
+
+## Tools for each step in the Pipeline
+- [ ] [Scribosermo](https://gitlab.com/Jaco-Assistant/Scribosermo) seems very interesting
+
+### Step 2 - Preprocessing
+
+### Step 3 - Segmentation & Classification
+#### Speaker Diarization
+- [ ] [Pyannote segmentation](https://huggingface.co/pyannote/segmentation-3.0)
+#### Audio Classification
+- [ ] {todo, not relevent atm}
+
+### Step 4 - Speech and Phoneme Extraction
+#### ASR
+- [ ] [Whisper models](https://huggingface.co/openai?search_models=whisper)
+- [ ] [FunASR](https://github.com/modelscope/FunASR) offers a whole model library
 
 
 
